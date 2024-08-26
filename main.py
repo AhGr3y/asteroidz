@@ -8,7 +8,15 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+    # Create a Clock object
+    clock = pygame.time.Clock()
+    dt = 0
+
     while (True):
+        # Set FPS to 60
+        elapsed = clock.tick(60)
+        # Set elapsed time as seconds to delta time
+        dt = elapsed / 1000
         # Activate window's close button
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
