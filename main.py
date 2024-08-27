@@ -2,6 +2,7 @@
 # the open-source pygame library
 # throughout this file
 import pygame
+import sys
 from constants import *
 from player import *
 from asteroid import *
@@ -44,6 +45,11 @@ def main():
         # Update updatables
         for obj in updatable:
             obj.update(dt)
+        # Exit the game if ship collided
+        for obj in asteroids:
+            if player.hasCollided(obj):
+                print("Game over!")
+                sys.exit()    
         # Re-render drawables
         for obj in drawable:
             obj.draw(screen)
