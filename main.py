@@ -13,8 +13,16 @@ def main():
     clock = pygame.time.Clock()
     dt = 0
 
+    # Group objects
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+
     # Spawn player
     player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+    # Add player to groups
+    updatable.add(player)
+    drawable.add(player)
+    player.containers = (updatable, drawable)
 
     while (True):
         # Set FPS to 60
@@ -27,8 +35,12 @@ def main():
                 return
         # Fill the screen black
         screen.fill(color=(0,0,0))
-        # Re-render player
-        player.draw(screen)
+        # Update updatables
+        for obj in updatable:
+            obj.update(dt)
+        # Re-render drawables
+        for obj in drawable:
+            obj.draw(screen)
         pygame.display.flip()
     
 # This line ensures the main() function is only called when this file is run directly;
