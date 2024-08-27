@@ -1,6 +1,9 @@
 # Asteroidz
 A clone of the classic Asteroids arcade game.
 
+# Pre-requisite
+Installed python: https://www.python.org/downloads/
+
 # Installation
 Clone this repository.
 ```bash
