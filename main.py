@@ -47,7 +47,7 @@ def main():
             obj.update(dt)
         # Exit the game if ship collided
         for obj in asteroids:
-            if player.hasCollided(obj):
+            if player.collide_with(obj):
                 print("Game over!")
                 sys.exit()    
         # Re-render drawables
