@@ -1,5 +1,5 @@
 # Asteroidz
-A clone of the classic Asteroids arcade game.
+A clone of the classic Asteroids arcade game. :D
 
 # Pre-requisite
 Install python: https://www.python.org/downloads/
