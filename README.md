@@ -11,7 +11,7 @@ git clone https://github.com/AhGr3y/asteroidz.git
 ```
 
 # Usage
-Run the program.
+Run the program...
 ```bash
 python3 main.py
 ```
